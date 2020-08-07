@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online.selfexpansion.commitment.mapper.WebSiteMapper">
+
+    <select id="selectList"  resultType="websiteinfo">
+select * from t_website_info
+</select>
+
+</mapper>
