@@ -6,4 +6,19 @@
 select * from t_website_info
 </select>
 
+    <update id="updateInfo" parameterType="online.selfexpansion.commitment.model.WebSiteInfo">
+update t_website_info
+<set>
+    <if test="ws_name!=null">
+        ws_name = #{ws_name},
+    </if>
+    <if test="ws_desc!=null">
+        ws_desc = #{ws_desc},
+    </if>
+    <if test="ws_copyright!=null">
+        ws_copyright = #{ws_copyright},
+    </if>
+</set>
+    </update>
+
 </mapper>

@@ -16,4 +16,7 @@ public class WebSiteServiceImpl implements WebSiteService {
     public List<WebSiteInfo> selectList(){
         return webSiteMapper.selectList();
     }
+
+    @Override
+    public  int updateInfo(WebSiteInfo webSiteInfo){ return webSiteMapper.updateInfo(webSiteInfo); }
 }

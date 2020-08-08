@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface WebSiteMapper {
     public List<WebSiteInfo> selectList();
+
+    public int updateInfo(WebSiteInfo webSiteInfo);
 }

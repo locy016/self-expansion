@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface WebSiteService {
     public List<WebSiteInfo> selectList();
+
+    public int updateInfo(WebSiteInfo webSiteInfo);
 }
