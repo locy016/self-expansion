@@ -1,7 +1,8 @@
-package online.selfexpansion.commitment.service;
+package online.selfexpansion.commitment.service.Impl;
 
 import online.selfexpansion.commitment.mapper.WebSiteMapper;
 import online.selfexpansion.commitment.model.WebSiteInfo;
+import online.selfexpansion.commitment.service.WebSiteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +14,12 @@ public class WebSiteServiceImpl implements WebSiteService {
     private WebSiteMapper webSiteMapper;
 
     @Override
-    public List<WebSiteInfo> selectList(){
+    public List<WebSiteInfo> selectList() {
         return webSiteMapper.selectList();
     }
 
     @Override
-    public  int updateInfo(WebSiteInfo webSiteInfo){ return webSiteMapper.updateInfo(webSiteInfo); }
+    public int updateInfo(WebSiteInfo webSiteInfo) {
+        return webSiteMapper.updateInfo(webSiteInfo);
+    }
 }

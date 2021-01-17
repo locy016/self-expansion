@@ -65,10 +65,10 @@ public class WebSiteController {
             json.put("code", 200);
             json.put("data", result);
             json.put("message", "已保存设置。");
-            return json;
         } catch (Exception e) {
             json.put("code", e.hashCode());
             json.put("message", e.getMessage());
+        } finally {
             return json;
         }
     }

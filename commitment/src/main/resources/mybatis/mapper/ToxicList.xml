@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online.selfexpansion.commitment.mapper.ToxicMapper">
+
+    <select id="selectList" resultType="toxiclist">
+select * from t_toxic_list
+</select>
+
+    <select id="selectByRandom" resultType="toxiclist">
+select * from t_toxic_list order by rand() LIMIT 1
+</select>
+
+    <insert id="insertInfo" parameterType="online.selfexpansion.commitment.model.ToxicList">
+insert into t_toxic_list (heading,content,author) values (#{heading},#{content},#{author})
+</insert>
+
+</mapper>

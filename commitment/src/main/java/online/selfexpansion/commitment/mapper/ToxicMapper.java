@@ -1,10 +1,12 @@
-package online.selfexpansion.commitment.service;
+package online.selfexpansion.commitment.mapper;
 
 import online.selfexpansion.commitment.model.ToxicList;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-public interface ToxicService {
+@Mapper
+public interface ToxicMapper {
     public List<ToxicList> selectList();
 
     public ToxicList selectByRandom();
